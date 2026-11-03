@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+.box {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  background: lightgray;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Pequenos ajustes para os elementos dos exercícios */
+input {
+  margin: 4px;
+  padding: 6px;
+}
+
+button {
+  margin: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.destaque {
+  font-weight: bold;
+  background-color: lightyellow;
+  font-size: 20px;
+}
+
+.concluida {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.linha-tarefa {
+  margin: 5px 0;
+}
+
+.imc-resultado {
+  color: red;
+  font-weight: bold;
+}
+
+.resumo {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #e5e5e5;
+}
+
+.botao-azul {
+  color: white;
+  background-color: blue;
+}
+
+.botao-remover {
+  background-color: #ddd;
+}
+
+/* Tema escuro minimalista */
+body.tema-escuro {
+  background-color: #222;
+  color: white;
+}
+
+.tema-escuro .box {
+  background-color: #333;
+  border-color: #555;
+}
+
+.tema-escuro li {
+  background-color: #444;
+  color: white;
+}
+
+.tema-escuro input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.tema-escuro button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+}
+
+.tema-escuro .resumo {
+  background-color: #333;
+}

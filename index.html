@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabDOM - Parte 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="pagina">
+    <header>
+        <h1>LAB-DOM PARTE2</h1>
+        <p>Atividade prática de JavaScript – Diego Gabriel Medeiros.</p>
+    </header>
+
+    <section class="box">
+        <h2>Exercício 1: Alterando Texto e Cor</h2>
+        <p id="texto">Clique no botão para mudar este texto e a cor.</p>
+        <button onclick="alterarTextoCor()">Alterar</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 2: Criando e Removendo Elementos</h2>
+        <button onclick="adicionarElemento()">Adicionar Parágrafo</button>
+        <button onclick="removerElemento()">Remover Parágrafo</button>
+        <div id="container"></div>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 3: Lista Interativa</h2>
+        <input type="text" id="itemInput" placeholder="Digite um item">
+        <button onclick="adicionarItem()">Adicionar</button>
+        <ul id="lista"></ul>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 4: Bhaskara</h2>
+        <p>Informe os valores de a, b e c para calcular as raízes da equação. O resultado será azul para uma raiz real, verde para duas raízes reais e vermelho quando não houver raízes reais.</p>
+        <input type="number" id="a" placeholder="Valor de a (ex: 1)" step="any">
+        <input type="number" id="b" placeholder="Valor de b (ex: -3)" step="any">
+        <input type="number" id="c" placeholder="Valor de c (ex: 2)" step="any">
+        <button onclick="calcularBhaskara()">Calcular</button>
+        <h3 id="resultadoBhaskara" aria-live="polite"></h3>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 5: Consumo de Combustível</h2>
+        <p>Informe a distância, o consumo do carro, a capacidade do tanque e o preço da gasolina.</p>
+        <input type="number" id="distancia" placeholder="Distância (km)" min="0" step="any">
+        <input type="number" id="consumo" placeholder="Consumo (km/L)" min="0" step="any">
+        <input type="number" id="capacidade" placeholder="Tanque (L)" min="0" step="any">
+        <input type="number" id="precoGasolina" placeholder="Gasolina (R$/L)" min="0" step="any">
+        <button onclick="calcularConsumo()">Calcular Consumo</button>
+        <div id="resultadoConsumo" class="resultado" aria-live="polite"></div>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 6: Par ou Ímpar</h2>
+        <input type="number" id="numeroParImpar" placeholder="Digite um número" step="1">
+        <button onclick="verificarParImpar()">Verificar</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 7: Maior de Três Números</h2>
+        <input type="number" id="num1" placeholder="Número 1" step="any">
+        <input type="number" id="num2" placeholder="Número 2" step="any">
+        <input type="number" id="num3" placeholder="Número 3" step="any">
+        <button onclick="verificarMaior()">Verificar Maior</button>
+        <p id="resultadoMaior" class="resultado" aria-live="polite"></p>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 8: Média de Notas</h2>
+        <input type="number" id="nota1" placeholder="Nota 1" min="0" max="10" step="any">
+        <input type="number" id="nota2" placeholder="Nota 2" min="0" max="10" step="any">
+        <input type="number" id="nota3" placeholder="Nota 3" min="0" max="10" step="any">
+        <button onclick="calcularMedia()">Calcular Média</button>
+        <h3 id="resultadoMedia" aria-live="polite"></h3>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 9: Tabuada</h2>
+        <input type="number" id="numeroTabuada" placeholder="Digite um número" step="any">
+        <button onclick="gerarTabuada()">Gerar Tabuada</button>
+        <ul id="resultadoTabuada"></ul>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 10: Contador</h2>
+        <input type="number" id="inicio" placeholder="Início" step="1">
+        <input type="number" id="fim" placeholder="Fim" step="1">
+        <button onclick="contarNumeros()">Contar</button>
+        <div id="resultadoContador" class="resultado" aria-live="polite"></div>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 11: Verificar Palíndromo</h2>
+        <input type="text" id="textoPalindromo" placeholder="Digite uma palavra ou frase">
+        <button onclick="verificarPalindromo()">Verificar</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 12: IMC</h2>
+        <input type="number" id="peso" placeholder="Peso (kg)" min="0" step="any">
+        <input type="number" id="altura" placeholder="Altura (m)" min="0" step="any">
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        <p id="resultadoIMC" aria-live="polite"></p>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 13: Criação Dinâmica de Botão</h2>
+        <button onclick="criarBotao()">Criar Botão</button>
+        <div id="areaBotoes"></div>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 14: Contador de Cliques</h2>
+        <button class="botao-azul" onclick="contarCliques()">Clique aqui</button>
+        <p>Total de cliques: <span id="contadorCliques">0</span></p>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 15: Relógio Digital</h2>
+        <button onclick="mostrarHora()">Mostrar Hora</button>
+        <h3 id="horaAtual" aria-live="polite"></h3>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 16: Mostrar e esconder conteúdo</h2>
+        <p id="texto16">Este parágrafo pode ser mostrado ou escondido pelo botão.</p>
+        <button onclick="alternarTexto()">Mostrar/Esconder</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 17: Alterar tema da página</h2>
+        <p>Alterne entre o tema claro e o tema escuro.</p>
+        <button onclick="alterarTema()">Alterar Tema</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 18: Contador com + e -</h2>
+        <button onclick="alterarContador(-1)">-</button>
+        <strong id="contador18" class="numero-contador">0</strong>
+        <button onclick="alterarContador(1)">+</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercícios 19 e 20: Lista de alunos e remoção individual</h2>
+        <input type="text" id="nomeAluno" placeholder="Digite o nome do aluno">
+        <button onclick="adicionarAluno()">Adicionar Aluno</button>
+        <ul id="listaAlunos"></ul>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 21: Destacar todos os parágrafos</h2>
+        <p class="texto21">Primeiro texto</p>
+        <p class="texto21">Segundo texto</p>
+        <p class="texto21">Terceiro texto</p>
+        <p class="texto21">Quarto texto</p>
+        <p class="texto21">Quinto texto</p>
+        <button onclick="destacarParagrafos()">Destacar</button>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 22: Calculadora simples</h2>
+        <input type="number" id="numero1" placeholder="Número 1" step="any">
+        <input type="number" id="numero2" placeholder="Número 2" step="any">
+        <div class="botoes-operacao">
+            <button onclick="calcular('+')">Somar</button>
+            <button onclick="calcular('-')">Subtrair</button>
+            <button onclick="calcular('*')">Multiplicar</button>
+            <button onclick="calcular('/')">Dividir</button>
+        </div>
+        <h3 id="resultado22" aria-live="polite">Resultado:</h3>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 23: Filtro de nomes</h2>
+        <input type="text" id="buscaAluno" placeholder="Buscar aluno">
+        <ul id="listaFiltro"></ul>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 24: Cadastro de produtos</h2>
+        <input type="text" id="nomeProduto" placeholder="Nome do produto">
+        <input type="number" id="precoProduto" placeholder="Preço (R$)" min="0" step="0.01">
+        <button onclick="adicionarProduto()">Adicionar Produto</button>
+        <ul id="listaProdutos"></ul>
+        <p id="totalProdutos" class="resultado">Total: R$ 0,00</p>
+    </section>
+
+    <section class="box">
+        <h2>Exercício 25: Mini lista de tarefas</h2>
+        <input type="text" id="novaTarefa" placeholder="Digite uma tarefa">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <div id="listaTarefas"></div>
+        <div class="resumo">
+            <p id="totalTarefas">Total de tarefas: 0</p>
+            <p id="concluidas">Tarefas concluídas: 0</p>
+            <p id="pendentes">Tarefas pendentes: 0</p>
+        </div>
+    </section>
+
+    <footer>
+        <p></p>
+    </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
